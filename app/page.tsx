@@ -1,38 +1,36 @@
 'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
-import Button from '@mui/material/Button'
 import Header from './Header'
 import Middle from './Middle'
 import Footer from './Footer'
 import { Box, Container } from '@mui/system'
-import {ThemeProvider, createTheme} from '@mui/material/styles'
+import Button from '@mui/material/Button'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 
 //"scripts": {
-    //"dev": "concurrently \"cross-end NODE_OPTIONS=--max_old_space_size=2048 next dev\"",
+//"dev": "concurrently \"cross-end NODE_OPTIONS=--max_old_space_size=2048 next dev\"",
 //}
-
 
 //export async function getStaticProps() {
-	/* var data = 'hellos';
+/* var data = 'hellos';
 
 //	return {
-		props: data
-	} */
+	props: data
+} */
 //}
 
+/* var theme = createTheme({
+	pallete: {
+		mode: 'light'
+	},
+	colorSchemes: {
+		dark: false
+	}
+}); */
 
-	/* var theme = createTheme({
-		pallete: {
-			mode: 'light'
-		},
-		colorSchemes: {
-			dark: false
-		}
-	}); */
-
-export default function Home({ data,err }: any, error: any) {			//deghat Home({ data: any }) dorost nemishe
+export default function Home({ data, err }: any, error: any) {			//deghat Home({ data: any }) dorost nemishe
 	// var a = 'hid';
 	// console.log(a)
 	// console.log(props)
@@ -40,27 +38,18 @@ export default function Home({ data,err }: any, error: any) {			//deghat Home({ 
 	console.log(error)
 	console.log(err)
 
-
 	return (
 		// <main className={styles.main}>
 		<>
-		{/* <ThemeProvider theme={theme}> */}
+			{/* <ThemeProvider theme={theme}> */}
 			{/* <CssBaseline /> */}
 			<Header />
 			<Middle />
 			<Footer />
 			{console.error()}
 			{/* {data} */}
-		{/* </ThemeProvider> */}
+			{/* </ThemeProvider> */}
 		</>
-
-
-
-
-
-
-
-
 
 
 

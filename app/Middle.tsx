@@ -14,7 +14,6 @@ import fe5 from './images/fe5.PNG'
 import fe6 from './images/fe6.PNG'
 import Grid from '@mui/system/Unstable_Grid'
 
-
 export default function Middle() {
 
 	return (

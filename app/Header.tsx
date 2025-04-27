@@ -1,6 +1,6 @@
 // 'use client'	//mohem. baraye esterfade az createTheme va styled dar client bayad az in estefade konim. hatta yedoone paiintar bashe error mide.
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'	//agar /Button ro nazarim error mide
+import { useEffect, useRef } from 'react'
+import { Box, Button } from '@mui/material'  //agar /Button ro nazarim error mide
 import { Container } from '@mui/system'
 import Image from 'next/image'
 import logo from './images/logo.PNG'
@@ -9,7 +9,6 @@ import Link from 'next/link'
 import './header.css'	//harchi toosh hast khodkar be elementha eemal mishe, ama baraye module.css bayad tak tak be class haye elementha ezafe konim vali daghightare va gahi 'bayad' injori estefade konim.
 import hstyle from './header.module.css'
 import { createTheme, styled } from '@mui/system'
-import { useEffect, useRef } from 'react'
 import Grid from '@mui/system/Unstable_Grid'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -23,7 +22,6 @@ export default function Header() {
 			duration: 800,
 			// once: true
 		});
-
 	});
 
 	/* var theme = createTheme({
@@ -34,9 +32,7 @@ export default function Header() {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-
 	})
-
 
 	var scroll = () => {
 		console.log('hihi')
@@ -69,7 +65,6 @@ export default function Header() {
 	}
 	scroll();		//deghat hatman bayad hatta yek bar call beshe ta amal kone, ama baraye taghirate baadi scroll dige call niyaz nist!
 
-
 	/* 	var sc = useRef(0)
 	useEffect(() => {
 		sc.current = window.scrollY
@@ -80,7 +75,6 @@ export default function Header() {
 	// console.log(window)
 
 	var togg = () => {
-		console.log('ssss')
 		var togvar = document!.getElementById('togglemenu')!.style!.left!.valueOf()			//avvalin bar khali yani hichi return nemikone, nemidoonam chera
 		console.log(typeof togvar)
 		if (togvar == '-112%' || ' ') {
@@ -90,14 +84,11 @@ export default function Header() {
 			document!.getElementById('modal')!.style!.visibility = 'visible';
 		} else {
 			document!.getElementById('togglemenu')!.style!.left = '-112%'
-
-			console.log('aaa')
 		}
 	}
 
-
 	return (
-		<header style={{backgroundColor: '#f7f9fc'}}>
+		<header style={{ backgroundColor: '#f7f9fc' }}>
 			<nav id='nav'>
 				<Box display='flex'>
 					{/* <Button><i className=''></i></Button> */}
@@ -129,10 +120,10 @@ export default function Header() {
 								document!.getElementById('modal')!.style!.opacity = '0';
 								document!.getElementById('modal')!.style!.visibility = 'hidden';
 							}} sx={{ display: 'block', marginRight: '0', marginLeft: 'auto' }}>close</Button>
-							<h3 style={{color: 'black'}}>LANDING PAGES</h3>
+							<h3 style={{ color: 'black' }}>LANDING PAGES</h3>
 							<Grid container my='1rem'>	{/*agar ba display='flex' estefade konim va dakhelesh masalan <Grid sm estefade nakonim, dar halate mobile sakhte az @media estefade konim */}
-								<Grid xs={12} md={6} sx={{'& ul li a': {color: 'black'}}}>
-									<ul style={{ listStyleType: 'none'}}>
+								<Grid xs={12} md={6} sx={{ '& ul li a': { color: 'black' } }}>
+									<ul style={{ listStyleType: 'none' }}>
 										<li id='li'><a href=''>Advertisement</a></li>
 										<li id='li'><a href=''>Marketing</a></li>
 										<li id='li'><a href=''>Course</a></li>
@@ -141,8 +132,8 @@ export default function Header() {
 										<li id='li'><a href=''>Travel</a></li>
 									</ul>
 								</Grid>
-								<Grid xs={12} md={6} sx={{'& ul li a': {color: 'black'}}}>	{/*khodkar ye faseleii beyne do column ijad mikone */}
-									<ul style={{ listStyleType: 'none'}}>
+								<Grid xs={12} md={6} sx={{ '& ul li a': { color: 'black' } }}>	{/*khodkar ye faseleii beyne do column ijad mikone */}
+									<ul style={{ listStyleType: 'none' }}>
 										<li id='li'><a href=''>Payment App</a></li>
 										<li id='li'><a href=''>Software Company</a></li>
 										<li id='li'><a href=''>Crypto Currency</a></li>
@@ -152,18 +143,18 @@ export default function Header() {
 									</ul>
 								</Grid>
 							</Grid>
-							<h3 style={{color: 'black'}}>SUPPORTING PAGES</h3>
+							<h3 style={{ color: 'black' }}>SUPPORTING PAGES</h3>
 							<Grid container my='1rem'>
-								<Grid xs={12} md={6} sx={{'& ul li a': {color: 'black'}}}>
-									<ul style={{ listStyleType: 'none'}}>
+								<Grid xs={12} md={6} sx={{ '& ul li a': { color: 'black' } }}>
+									<ul style={{ listStyleType: 'none' }}>
 										<li id='li'><a href=''>About</a></li>
 										<li id='li'><a href=''>Contact</a></li>
 										<li id='li'><a href=''>Customers</a></li>
 										<li id='li'><a href=''>Comming Soon</a></li>
 									</ul>
 								</Grid>
-								<Grid xs={12} md={6} sx={{'& ul li a': {color: 'black'}}}>
-									<ul style={{ listStyleType: 'none'}}>
+								<Grid xs={12} md={6} sx={{ '& ul li a': { color: 'black' } }}>
+									<ul style={{ listStyleType: 'none' }}>
 										<li id='li'><a href=''>Services</a></li>
 										<li id='li'><a href=''>Pricing</a></li>
 										<li id='li'><a href=''>Hire Us</a></li>
@@ -171,9 +162,9 @@ export default function Header() {
 									</ul>
 								</Grid>
 							</Grid>
-							<h3 style={{color: 'black'}}>Auth Page</h3>
-							<Grid container my='1rem' sx={{'& ul li a': {color: 'black'}}}>
-								<ul style={{ listStyleType: 'none'}}>
+							<h3 style={{ color: 'black' }}>Auth Page</h3>
+							<Grid container my='1rem' sx={{ '& ul li a': { color: 'black' } }}>
+								<ul style={{ listStyleType: 'none' }}>
 									<li id='li'><a href=''>Login</a></li>
 									<li id='li'><a href=''>Sign Up</a></li>
 									<li id='li'><a href=''>Forget Password</a></li>
@@ -186,8 +177,8 @@ export default function Header() {
 				</Box>
 				<Box>
 					<ul className='headRight'>
-						<li><Link href="/" style={{color: 'black'}}>Home</Link></li>
-						<li><Link href="/" style={{color: 'black'}}>Document</Link></li>
+						<li><Link href="/" style={{ color: 'black' }}>Home</Link></li>
+						<li><Link href="/" style={{ color: 'black' }}>Document</Link></li>
 					</ul>
 				</Box>
 			</nav>

@@ -12,10 +12,8 @@ header nav {
 	background-color: #eee;
 }
 
-
 header nav ul.headRight {
 	list-style-type: none;
-	
 }
 
 header nav ul.headRight li {
@@ -38,5 +36,4 @@ header nav div div div ul li {
 		width: 85% !important;
 		margin: auto auto !important;
 	}
-	
 }
