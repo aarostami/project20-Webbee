@@ -4,7 +4,7 @@ import { Box, Button } from '@mui/material'  //agar /Button ro nazarim error mid
 import { Container } from '@mui/system'
 import Image from 'next/image'
 import logo from './images/logo.PNG'
-// import astro from './images/astronat.PNG'
+import astro from './images/astronat.PNG'
 import Link from 'next/link'
 import './header.css'	//harchi toosh hast khodkar be elementha eemal mishe, ama baraye module.css bayad tak tak be class haye elementha ezafe konim vali daghightare va gahi 'bayad' injori estefade konim.
 import hstyle from './header.module.css'
