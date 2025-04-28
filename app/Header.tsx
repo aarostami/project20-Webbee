@@ -87,8 +87,7 @@ export default function Header() {
 		}
 	}
 
-	return (
-		<header style={{ backgroundColor: '#f7f9fc' }}>
+	return (<header style={{ backgroundColor: '#f7f9fc' }}>
 			<nav id='nav'>
 				<Box display='flex'>
 					{/* <Button><i className=''></i></Button> */}
@@ -203,6 +202,5 @@ export default function Header() {
 				</Grid>
 				{/* </FirstDiv> */}
 			</Container>
-		</header >
-	);
+		</header>);
 }
