@@ -15,7 +15,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 
 //export async function getStaticProps() {
 /* var data = 'hellos';
-
+ 
 //	return {
 	props: data
 } */
